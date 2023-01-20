@@ -1,7 +1,7 @@
 var prompt = require('prompt-sync')();
 
 // Create board for game
-let board = ["_", "_", "_",
+var board = ["_", "_", "_",
              "_", "_", "_",
              "_", "_", "_"];
 
@@ -16,7 +16,7 @@ let playerTurn = true;
 // create function to check for who's won
 console.log("Welcome to the exciting game of Tic Tac Toe! This is a battle to decide the fate of the world. The name of the game is to be the first person to dominate the battlefield with three in a row! The first player is represented by the O and the second player the X.")
 
-var playerMove = prompt('Where would you like to move? (1-9)');{
+var playerMove = prompt('Where would you like to move? (1-9)')
     switch(playerMove) {
         case playerMove == 1 && board[0] == "_":
             if(playerTurn == true){
@@ -100,7 +100,7 @@ var playerMove = prompt('Where would you like to move? (1-9)');{
             }
             break;
         default: console.log("Invalid move, please try again.");
-      }
+      
 }
 
 // ask player for current move (location on board)
