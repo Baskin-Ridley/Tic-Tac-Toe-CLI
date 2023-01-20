@@ -239,7 +239,20 @@ function ticTacToeMove() {
 }
 
 // ask player for current move (location on board)
-
+function playAnother() {
+    var playAgain = prompt("Would you like to play again? (Y/N): ").toLowerCase();
+    if (playAgain == "y") {
+        board = ["_", "_", "_",
+        "_", "_", "_",
+        "_", "_", "_"];
+        playerTurn = true;
+        ticTacToe();
+    } else if (playAgain == "n") {
+        console.log("Thank you for playing!")
+    } else {
+        console.log("Invalid input, please try again.")
+    }
+}
 
 ticTacToe();
 
