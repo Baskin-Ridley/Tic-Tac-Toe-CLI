@@ -253,6 +253,5 @@ function playAnother() {
         console.log("Invalid input, please try again.")
     }
 }
-
 ticTacToe();
 
