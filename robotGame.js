@@ -5,65 +5,65 @@ function robotGame() {
     let robotChoice = ""
 
     switch (true) {
-        case playerMove == 1 && board[0] == "_":
+        case playerMove == 1 && board[0] == "":
             board[0] = "O";
-            while (board[robotChoice] != "_") {
+            while (board[robotChoice] != "") {
                 robotChoice = Math.floor(Math.random() * 9 + 1);
             }
             board[robotChoice] = "X";
             break;
-        case playerMove == 2 && board[1] == "_":
+        case playerMove == 2 && board[1] == "":
             board[1] = "O";
-            while (board[robotChoice] != "_") {
+            while (board[robotChoice] != "") {
                 robotChoice = Math.floor(Math.random() * 9 + 1);
             }
             board[robotChoice] = "X"
             break;
-        case playerMove == 3 && board[2] == "_":
+        case playerMove == 3 && board[2] == "":
             board[2] = "O";
-            while (board[robotChoice] != "_") {
+            while (board[robotChoice] != "") {
                 robotChoice = Math.floor(Math.random() * 9 + 1);
             }
             board[robotChoice] = "X"
             break;
-        case playerMove == 4 && board[3] == "_":
+        case playerMove == 4 && board[3] == "":
             board[3] = "O";
-            while (board[robotChoice] != "_") {
+            while (board[robotChoice] != "") {
                 robotChoice = Math.floor(Math.random() * 9 + 1);
             }
             board[robotChoice] = "X";
             break;
-        case playerMove == 5 && board[4] == "_":
+        case playerMove == 5 && board[4] == "":
             board[4] = "O";
-            while (board[robotChoice] != "_") {
+            while (board[robotChoice] != "") {
                 robotChoice = Math.floor(Math.random() * 9 + 1);
             }
             board[robotChoice] = "X"
             break;
-        case playerMove == 6 && board[5] == "_":
+        case playerMove == 6 && board[5] == "":
             board[5] = "O";
-            while (board[robotChoice] != "_") {
+            while (board[robotChoice] != "") {
                 robotChoice = Math.floor(Math.random() * 9 + 1);
             }
             board[robotChoice] = "X"
             break;
-        case playerMove == 7 && board[6] == "_":
+        case playerMove == 7 && board[6] == "":
             board[6] = "O";
-            while (board[robotChoice] != "_") {
+            while (board[robotChoice] != "") {
                 robotChoice = Math.floor(Math.random() * 9 + 1);
             }
             board[robotChoice] = "X";
             break;
-        case playerMove == 8 && board[7] == "_":
+        case playerMove == 8 && board[7] == "":
             board[7] = "O";
-            while (board[robotChoice] != "_") {
+            while (board[robotChoice] != "") {
                 robotChoice = Math.floor(Math.random() * 9 + 1);
             }
             board[robotChoice] = "X"
             break;
-        case playerMove == 9 && board[8] == "_":
+        case playerMove == 9 && board[8] == "":
             board[9] = "O";
-            while (board[robotChoice] != "_") {
+            while (board[robotChoice] != "") {
                 robotChoice = Math.floor(Math.random() * 9 + 1);
             }
             board[robotChoice] = "X"
