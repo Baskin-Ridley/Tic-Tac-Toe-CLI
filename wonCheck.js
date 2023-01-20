@@ -21,4 +21,4 @@ function wonCheck(board, playerTurn) {
 }
 
 
-module.exports = woncheck;
+module.exports = wonCheck;
