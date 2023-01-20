@@ -4,9 +4,13 @@ function ticTacToe() {
 
     console.log("Welcome to the exciting game of Tic Tac Toe! This is a battle to decide the fate of the world. The name of the game is to be the first person to dominate the battlefield with three in a row! The first player is represented by the O and the second player the X.")
 
-
-    ticTacToeMove();
-
+    var howManyPlayers = Number(prompt("How many people would like to play? (1 or 2): "))
+    if (howManyPlayers == 1) {
+        robotGame();
+    } else if (howManyPlayers == 2) {
+        ticTacToeMove();
+    }
+    else(console.log("Invalid input, please try again."))
 }
 
 
