@@ -136,6 +136,8 @@ do{
 
  if (  check(board,playerTurn) == "player" ||  check(board,playerTurn) == "bot" ){
 
+    
+
  }
 
 }
