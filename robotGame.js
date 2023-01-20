@@ -1,3 +1,5 @@
+var prompt = require('prompt-sync')();
+
 function robotGame() {
     console.log("Foolish human you dare challenge the robot overlord, how foolish. Just to give you a chance I will let you make the first move!")
 
