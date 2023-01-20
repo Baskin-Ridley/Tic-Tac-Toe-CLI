@@ -16,12 +16,14 @@ let playerTurn = true;
 // create function to check for who's won
 console.log("Welcome to the exciting game of Tic Tac Toe! This is a battle to decide the fate of the world. The name of the game is to be the first person to dominate the battlefield with three in a row! The first player is represented by the O and the second player the X.")
 
-var playerMove = prompt('Where would you like to move? (1-9)');{
-    switch(playerMove) {
+ var playerMove =  Number(prompt("Enter a number below 10: "))
+
+    switch(true) {
         case playerMove == 1 && board[0] == "_":
             if(playerTurn == true){
                 board[0] = "O";
                 playerTurn = false;
+                console.log("we went in!")
             }else{
                 board[0] = "X";
                 playerTurn = true;
@@ -31,6 +33,7 @@ var playerMove = prompt('Where would you like to move? (1-9)');{
             if(playerTurn == true){
                 board[1] = "O";
                 playerTurn = false;
+                console.log("we went in!")
             }else{
                 board[1] = "X";
                 playerTurn = true;
@@ -101,6 +104,16 @@ var playerMove = prompt('Where would you like to move? (1-9)');{
             break;
         default: console.log("Invalid move, please try again.");
       }
-}
+
+
+
+
+
+
+
+
+
+
+
 
 // ask player for current move (location on board)
