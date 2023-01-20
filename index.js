@@ -42,7 +42,7 @@ function wonCheck(board, playerTurn) {
             return 1
         }     
     })
-    return null;
+
 }
 
 
@@ -142,8 +142,7 @@ function ticTacToeMove() {
 // ask player for current move (location on board)
 
 
-//ticTacToe();
-var board2 = [1, 1, 1,
-    1, 3, 3,
-    1, 4, 4];
-console.log(wonCheck(board2));
+ticTacToe();
+
+
+
