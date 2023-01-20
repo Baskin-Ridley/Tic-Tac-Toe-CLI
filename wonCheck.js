@@ -11,14 +11,17 @@ function wonCheck(board, turnPlayer) {
         const num3 = c[index]
 
         if (new Set([board[num1], board[num2], board[num3]]).size == 1 && turnPlayer == true && board[num1] != "") {
-            return console.log(won = "player")
+            won = "bot"
+        
         } else if (new Set([board[num1], board[num2], board[num3]]).size == 1 && turnPlayer == false && board[num1] != "") {
-            return won = "bot"
+             won = "player"
+            
         }
     })
 
-}
+    return won;
 
+}
 
 module.exports = wonCheck;
 
