@@ -1,19 +1,11 @@
 var prompt = require('prompt-sync')();
 const check = require('./wonCheck');
 const robotGame = require('./robotGame');
-function ticTacToe() {
+const display = require(`./displayBoard`);
 
-    var howManyPlayers = Number(prompt("How many people would like to play? (1 or 2): "))
-    if (howManyPlayers == 1) {
-        console.log("Foolish human you dare challenge the robot overlord, how foolish. Just to give you a chance I will let you make the first move!")
-        robotGame();
-    } else if (howManyPlayers == 2) {
-        console.log("Welcome to the exciting game of Tic Tac Toe! This is a battle to decide the fate of the world. The name of the game is to be the first person to dominate the battlefield with three in a row! The first player is represented by the O and the second player the X.")
-        ticTacToeMove();
-    }
-    else (console.log("Invalid input, please try again."))
-}
 
+
+// Create scoreboard to store game results
 var scoreboard = [];
 // Create board for game
 var board = ["", "", "",
@@ -23,21 +15,42 @@ var board = ["", "", "",
 // variables to keep track of current player
 let playerTurn = true;
 
-console.log(check(board, playerTurn));
 
-// create function to display board 
-function displayBoard() {
-    console.log(board[0] + " | " + board[1] + " | " + board[2]);
-    console.log("---------");
-    console.log(board[3] + " | " + board[4] + " | " + board[5]);
-    console.log("---------");
-    console.log(board[6] + " | " + board[7] + " | " + board[8]);
+
+function ticTacToe() {
+
+    var howManyPlayers = Number(prompt("How many people would like to play? (1 or 2): "))
+    if (howManyPlayers == 1) {
+        console.log("Foolish human you dare challenge the robot overlord, how foolish. Just to give you a chance I will let you make the first move!")
+        robotGame(board);
+    } else if (howManyPlayers == 2) {
+        console.log("Welcome to the exciting game of Tic Tac Toe! This is a battle to decide the fate of the world. The name of the game is to be the first person to dominate the battlefield with three in a row! The first player is represented by the O and the second player the X.")
+        ticTacToeMove();
+    }
+    else (console.log("Invalid input, please try again."))
 }
 
-displayBoard();
+display(board);
 
-// create function to check for who's won
 
+
+// ask player for current move (location on board)
+function playAnother() {
+    var playAgain = prompt("Would you like to play again? (Y/N): ").toLowerCase();
+    if (playAgain == "y") {
+        board = ["", "", "",
+            "", "", "",
+            "", "", ""];
+        playerTurn = true;
+        ticTacToe();
+    } else if (playAgain == "n") {
+        console.log("Thank you for playing!")
+    } else {
+        console.log("Invalid input, please try again.")
+    }
+}
+
+ticTacToeMove();
 
 function ticTacToeMove() {
 
@@ -131,9 +144,11 @@ function ticTacToeMove() {
                 break;
             default: console.log("Invalid move, please try again.");
         }
-        displayBoard();
+        display(board);
         turn++;
     }
+
+    // create function to check for who's won
 
     if (check(board, playerTurn) == "player" || check(board, playerTurn) == "bot") {
         check(board, playerTurn) == "player" ? console.log("congratulation you won!") : console.log("congratulation you managed to lose to an AI that randomly places crosses...")
@@ -141,23 +156,78 @@ function ticTacToeMove() {
         playAnother();
     }
 
+
 }
 
-// ask player for current move (location on board)
-function playAnother() {
-    var playAgain = prompt("Would you like to play again? (Y/N): ").toLowerCase();
-    if (playAgain == "y") {
-        board = ["_", "_", "_",
-            "_", "_", "_",
-            "_", "_", "_"];
-        playerTurn = true;
-        ticTacToe();
-    } else if (playAgain == "n") {
-        console.log("Thank you for playing!")
-    } else {
-        console.log("Invalid input, please try again.")
+function robotGame(board) {
+    var playerMove = Number(prompt("Enter a number from 1 to 9: "))
+    let robotChoice = ""
+
+    switch (true) {
+        case playerMove == 1 && board[0] == "":
+            board[0] = "O";
+            while (board[robotChoice] != "") {
+                robotChoice = Math.floor(Math.random() * 9 + 1);
+            }
+            board[robotChoice] = "X";
+            break;
+        case playerMove == 2 && board[1] == "":
+            board[1] = "O";
+            while (board[robotChoice] != "") {
+                robotChoice = Math.floor(Math.random() * 9 + 1);
+            }
+            board[robotChoice] = "X"
+            break;
+        case playerMove == 3 && board[2] == "":
+            board[2] = "O";
+            while (board[robotChoice] != "") {
+                robotChoice = Math.floor(Math.random() * 9 + 1);
+            }
+            board[robotChoice] = "X"
+            break;
+        case playerMove == 4 && board[3] == "":
+            board[3] = "O";
+            while (board[robotChoice] != "") {
+                robotChoice = Math.floor(Math.random() * 9 + 1);
+            }
+            board[robotChoice] = "X";
+            break;
+        case playerMove == 5 && board[4] == "":
+            board[4] = "O";
+            while (board[robotChoice] != "") {
+                robotChoice = Math.floor(Math.random() * 9 + 1);
+            }
+            board[robotChoice] = "X"
+            break;
+        case playerMove == 6 && board[5] == "":
+            board[5] = "O";
+            while (board[robotChoice] != "") {
+                robotChoice = Math.floor(Math.random() * 9 + 1);
+            }
+            board[robotChoice] = "X"
+            break;
+        case playerMove == 7 && board[6] == "":
+            board[6] = "O";
+            while (board[robotChoice] != "") {
+                robotChoice = Math.floor(Math.random() * 9 + 1);
+            }
+            board[robotChoice] = "X";
+            break;
+        case playerMove == 8 && board[7] == "":
+            board[7] = "O";
+            while (board[robotChoice] != "") {
+                robotChoice = Math.floor(Math.random() * 9 + 1);
+            }
+            board[robotChoice] = "X"
+            break;
+        case playerMove == 9 && board[8] == "":
+            board[9] = "O";
+            while (board[robotChoice] != "") {
+                robotChoice = Math.floor(Math.random() * 9 + 1);
+            }
+            board[robotChoice] = "X"
+            break;
+        default: console.log("Invalid move, please try again.");
     }
+    display(board);
 }
-
-ticTacToeMove();
-
