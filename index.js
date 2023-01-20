@@ -133,6 +133,7 @@ function robotGame(){
                     break;
                 default: console.log("Invalid move, please try again.");
     }
+    displayBoard();
 }
 
 function ticTacToeMove() { 
@@ -225,6 +226,7 @@ function ticTacToeMove() {
             break;
         default: console.log("Invalid move, please try again.");
     }
+	displayBoard();
 
 }
 
