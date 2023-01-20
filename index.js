@@ -1,7 +1,7 @@
 // Create board for game
-let board = [" ", " ", " ",
-             " ", " ", " ",
-             " ", " ", " "];
+let board = ["_", "_", "_",
+             "_", "_", "_",
+             "_", "_", "_"];
 
 
 // variables to keep track of current player
