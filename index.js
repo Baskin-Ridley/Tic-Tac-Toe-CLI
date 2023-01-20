@@ -16,14 +16,14 @@ function ticTacToe() {
 
 
 // Create board for game
-var board = ["_", "_", "_",
-             "_", "_", "_",
-             "_", "_", "_"];
+var board = ["", "", "",
+             "", "", "",
+             "", "", ""];
 
 // variables to keep track of current player
-
-
 let playerTurn = true;
+
+console.log(check(board,playerTurn));
 
 // create function to display board 
 function displayBoard() {
@@ -39,15 +39,14 @@ displayBoard();
 // create function to check for who's won
 
 
-
-
-
 function ticTacToeMove() {
 
+    let turn = 1;
+do{
     var playerMove = Number(prompt("Enter a number from 1 to 9: "))
 
     switch (true) {
-        case playerMove == 1 && board[0] == "_":
+        case playerMove == 1 && board[0] == "":
             if (playerTurn == true) {
                 board[0] = "O";
                 playerTurn = false;
@@ -57,7 +56,7 @@ function ticTacToeMove() {
                 playerTurn = true;
             }
             break;
-        case playerMove == 2 && board[1] == "_":
+        case playerMove == 2 && board[1] == "":
             if (playerTurn == true) {
                 board[1] = "O";
                 playerTurn = false;
@@ -67,7 +66,7 @@ function ticTacToeMove() {
                 playerTurn = true;
             }
             break;
-        case playerMove == 3 && board[2] == "_":
+        case playerMove == 3 && board[2] == "":
             if (playerTurn == true) {
                 board[2] = "O";
                 playerTurn = false;
@@ -76,7 +75,7 @@ function ticTacToeMove() {
                 playerTurn = true;
             }
             break;
-        case playerMove == 4 && board[3] == "_":
+        case playerMove == 4 && board[3] == "":
             if (playerTurn == true) {
                 board[3] = "O";
                 playerTurn = false;
@@ -85,7 +84,7 @@ function ticTacToeMove() {
                 playerTurn = true;
             }
             break;
-        case playerMove == 5 && board[4] == "_":
+        case playerMove == 5 && board[4] == "":
             if (playerTurn == true) {
                 board[4] = "O";
                 playerTurn = false;
@@ -94,7 +93,7 @@ function ticTacToeMove() {
                 playerTurn = true;
             }
             break;
-        case playerMove == 6 && board[5] == "_":
+        case playerMove == 6 && board[5] == "":
             if (playerTurn == true) {
                 board[5] = "O";
                 playerTurn = false;
@@ -103,7 +102,7 @@ function ticTacToeMove() {
                 playerTurn = true;
             }
             break;
-        case playerMove == 7 && board[6] == "_":
+        case playerMove == 7 && board[6] == "":
             if (playerTurn == true) {
                 board[6] = "O";
                 playerTurn = false;
@@ -112,7 +111,7 @@ function ticTacToeMove() {
                 playerTurn = true;
             }
             break;
-        case playerMove == 8 && board[7] == "_":
+        case playerMove == 8 && board[7] == "":
             if (playerTurn == true) {
                 board[7] = "O";
                 playerTurn = false;
@@ -121,7 +120,7 @@ function ticTacToeMove() {
                 playerTurn = true;
             }
             break;
-        case playerMove == 9 && board[8] == "_":
+        case playerMove == 9 && board[8] == "":
             if (playerTurn == true) {
                 board[8] = "O";
                 playerTurn = false;
@@ -133,6 +132,11 @@ function ticTacToeMove() {
         default: console.log("Invalid move, please try again.");
     }
 	displayBoard();
+ }while( turn <= 9 && check(board,playerTurn) != "player" &&  check(board,playerTurn) != "bot" ) 
+
+ if (  check(board,playerTurn) == "player" ||  check(board,playerTurn) == "bot" ){
+
+ }
 
 }
 
@@ -152,5 +156,5 @@ function playAnother() {
     }
 }
 
-ticTacToe();
+//ticTacToe();
 
