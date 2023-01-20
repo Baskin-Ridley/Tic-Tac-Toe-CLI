@@ -2,12 +2,12 @@ var prompt = require('prompt-sync')();
 
 function ticTacToe() {
 
-    console.log("Welcome to the exciting game of Tic Tac Toe! This is a battle to decide the fate of the world. The name of the game is to be the first person to dominate the battlefield with three in a row! The first player is represented by the O and the second player the X.")
-
     var howManyPlayers = Number(prompt("How many people would like to play? (1 or 2): "))
     if (howManyPlayers == 1) {
+        console.log("Foolish human you dare challenge the robot overlord, how foolish. Just to give you a chance I will let you make the first move!")
         robotGame();
     } else if (howManyPlayers == 2) {
+        console.log("Welcome to the exciting game of Tic Tac Toe! This is a battle to decide the fate of the world. The name of the game is to be the first person to dominate the battlefield with three in a row! The first player is represented by the O and the second player the X.")
         ticTacToeMove();
     }
     else(console.log("Invalid input, please try again."))
@@ -63,7 +63,6 @@ function wonCheck(board, playerTurn) {
 }
 
 function robotGame(){
-    console.log("Foolish human you dare challenge the robot overlord, how foolish. Just to give you a chance I will let you make the first move!")
 
     var playerMove = Number(prompt("Enter a number below 10: "))
     let robotChoice = ""
