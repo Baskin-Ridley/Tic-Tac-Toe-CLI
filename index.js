@@ -1,7 +1,16 @@
 var prompt = require('prompt-sync')();
 
+function ticTacToe(){
+
+    console.log("Welcome to the exciting game of Tic Tac Toe! This is a battle to decide the fate of the world. The name of the game is to be the first person to dominate the battlefield with three in a row! The first player is represented by the O and the second player the X.")
+
+    ticTacToeMove();
+
+}
+
+
 // Create board for game
-let board = ["_", "_", "_",
+var board = ["_", "_", "_",
              "_", "_", "_",
              "_", "_", "_"];
 
@@ -14,9 +23,12 @@ let playerTurn = true;
 
 
 // create function to check for who's won
-console.log("Welcome to the exciting game of Tic Tac Toe! This is a battle to decide the fate of the world. The name of the game is to be the first person to dominate the battlefield with three in a row! The first player is represented by the O and the second player the X.")
 
- var playerMove =  Number(prompt("Enter a number below 10: "))
+
+
+function ticTacToeMove() { 
+
+    var playerMove =  Number(prompt("Enter a number below 10: "))
 
     switch(true) {
         case playerMove == 1 && board[0] == "_":
@@ -103,17 +115,11 @@ console.log("Welcome to the exciting game of Tic Tac Toe! This is a battle to de
             }
             break;
         default: console.log("Invalid move, please try again.");
-      }
+}
 
-
-
-
-
-
-
-
-
-
-
+}
 
 // ask player for current move (location on board)
+
+
+//ticTacToe();
