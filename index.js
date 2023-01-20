@@ -61,13 +61,8 @@ function wonCheck(board, playerTurn) {
 function robotGame(){
     console.log("Foolish human you dare challenge the robot overlord, how foolish. Just to give you a chance I will let you make the first move!")
 
-
     var playerMove = Number(prompt("Enter a number below 10: "))
     let robotChoice = ""
-
-
-function ticTacToeMove() {
-
 
     switch(true){
         case playerMove == 1 && board[0] == "_":
