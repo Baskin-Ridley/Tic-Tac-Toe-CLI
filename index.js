@@ -137,7 +137,7 @@ function robotGame(){
 
 function ticTacToeMove() { 
 
-    var playerMove = Number(prompt("Enter a number below 10: "))
+    var playerMove = Number(prompt("Enter a number from 1 to 9: "))
 
     switch (true) {
         case playerMove == 1 && board[0] == "_":
